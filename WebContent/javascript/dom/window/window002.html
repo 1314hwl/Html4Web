@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Window Location</title>
+	</head>
+
+	<body>
+		<h1>Window Location:window.location 对象在编写时可不使用 window 这个前缀。</h1>
+		<ul>
+			<li>location.hostname 返回 web 主机的域名</li>
+			<li>location.pathname 返回当前页面的路径和文件名</li>
+			<li>location.port 返回 web 主机的端口 （80 或 443）</li>
+			<li>location.protocol 返回所使用的 web 协议（http:// 或 https://）</li>
+		</ul>
+		<button onclick="newDoc()">加载新文档</button><br>
+		<script type="text/javascript">
+			function newDoc() {
+				window.location.assign("http://www.w3cschool.cc")
+			}
+			document.write(location.href + "<br>");
+			document.write(location.hostname + "<br>");
+			document.write(location.pathname + "<br>");
+			document.write(location.port + "<br>");
+			document.write(location.protocol + "<br>");
+		</script>
+	</body>
+
+</html>

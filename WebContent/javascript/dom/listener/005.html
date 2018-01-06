@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1 {
+				background-color: yellow;
+				padding: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="div1">
+			<p id="p1">div 元素添加了 onmousemove 事件句柄，鼠标在桔红色的框内移动时会显示随机数。 点击按钮移除 DIV 的事件句柄。</p>
+			<button id="btn1" onclick="removeListener()">点我</button>
+		</div>
+		<p id="demo"></p>
+		<script type="text/javascript">
+			document.getElementById("div1").addEventListener("mousemove", test)
+
+			function test() {
+				document.getElementById("demo").innerHTML = Math.random();
+			}
+
+			function removeListener() {
+				document.getElementById("div1").removeEventListener("mousemove", test);
+			}
+		</script>
+	</body>
+
+</html>

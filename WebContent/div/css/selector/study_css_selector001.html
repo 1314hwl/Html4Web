@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css的6种选择器</title>
+<style>
+#div1 {
+	/* id 选择器 */
+	background-color: fuchsia;
+	width: 300px;
+	height: 30px;
+	border-style: solid;
+	border-color: aqua;
+	border-width: 2px;
+}
+
+.div2_class {
+	/* 类选择器 */
+	width: 400px;
+	height: 30px;
+	background-color: maroon;
+	margin-top: 10px;
+	border-style: groove;
+	border-color: lime;
+	border-width: 2px;
+}
+
+code, p {
+	/* 分组选择器 */
+	color: blue;
+}
+
+.div4_class h1 code {
+	/* 嵌套选择器 */
+	color: red;
+}
+
+.div5_class li.one {
+	/* 后代选择器 */
+	color: red;
+}
+
+.div5_class>ul>li.two {
+	/* 子元素选择器(以大于号分隔） */
+	color: blue;
+}
+
+ul+p {
+	/* 相邻兄弟选择器（以加号分隔） */
+	background-color: yellow;
+}
+/* 伪类选择器 */
+a:link {
+	color: #000000;
+} /* 未访问链接*/
+a:visited {
+	color: #00FF00;
+} /* 已访问链接 */
+a:hover {
+	color: #FF00FF;
+} /* 鼠标移动到链接上 */
+a:active {
+	color: #0000FF;
+} /* 鼠标点击时 */
+/* 伪类选择器 */
+#div6 h3:FIRST-CHILD {
+	color: green;
+}
+
+[title="H"] {
+	color: yellow;
+}
+
+[title~=world] {
+	color: maroon;
+}
+</style>
+</head>
+<body>
+	<div id="div_parent" class="parent_class">
+		<div id="div1" class="div1_class">
+			<code>1:id选择器</code>
+		</div>
+		<div id="div2" class="div2_class">
+			<code>2:类选择器</code>
+		</div>
+		<div id="div3" class="div3_class">
+			<p>3:分组选择器：给一组标签设置属性</p>
+		</div>
+		<div id="div4" class="div4_class">
+			<h1>
+				<code>4:嵌套 选择器：层层深入</code>
+			</h1>
+		</div>
+		<div id="div5" class="div5_class">
+			<h2>
+				<code>5:组合选择器</code>
+			</h2>
+			<ul>
+				<li class="one">后代选取器(以空格分隔)</li>
+				<li class="two">子元素选择器(以大于号分隔）</li>
+				<li class="three">相邻兄弟选择器（以加号分隔）</li>
+				<li class="four">普通兄弟选择器（以破折号分隔）</li>
+			</ul>
+			<p>子元素选择器(以大于号分隔）</p>
+		</div>
+
+		<div id="div6" class="div6_class">
+			<h3>
+				<span>6:伪类选择器<span> test span</span></span>
+			</h3>
+			<p>
+				<b><a href="/css/" target="_blank">这是一个链接</a></b>
+			</p>
+		</div>
+		<div id="div7" class="div7_class">
+			<h3 title="Hello world">7:属性选择器</h3>
+			<h3 title="H">test</h3>
+			<h3 title="Hello world">test1</h3>
+		</div>
+	</div>
+</body>
+</html>

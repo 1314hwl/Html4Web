@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<p id="demo"></p>
+		<input type="button" value="点我" onclick="test()" />
+		<script type="text/javascript">
+			function test() {
+				var x;
+				var y = confirm("按下按钮！！");
+				if(y == true) {
+					x = "你按下了\"确定\"按钮!";
+				} else {
+					x = "你按下了\"取消\"按钮!";
+				}
+				document.getElementById("demo").innerHTML = x;
+			}
+		</script>
+	</body>
+
+</html>

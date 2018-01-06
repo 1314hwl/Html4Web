@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Java Script void</title>
+		<script type="text/javascript">
+			function getValue() {
+				var a, b, c;
+				a = void(b = 9, c = 3);
+				alert('a = ' + a + ' b = ' + b +' c = ' + c );
+			}
+		</script>
+	</head>
+
+	<body>
+		<a href="javascript:void(0)">单此处什么也不会发生</a>
+		</br>
+
+		<a href="javascript:void(alert('success!!!'))">猛击我</a>
+
+		<form>
+			<input type="button" value="点击我" onclick="getValue()" />
+
+		</form>
+	</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>javascript 对象的学习</title>
+	</head>
+
+	<body>
+		<h1>javaScript对象:</h1>
+		<p id="content"></p>
+		<p id="content-other"></p>
+		<script>
+			var person = {
+				name: "huweiliang",
+				age: 18,
+				job: "android developer"
+			};
+			document.getElementById("content").innerHTML = "我的名字叫：" + person.name + " 今年" + person.age + "岁" + " 我的职业是：" + person.job;
+			document.getElementById("content-other").innerHTML = "我的名字叫：" + person["name"] + " 今年" + person["age"] + "岁" + " 我的职业是：" + person["job"];
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>css3 bg</title>
+		<style type="text/css">
+			/*#example1 {
+				background-image: url(border.png), url(img15.jpg);
+				background-position: right bottom, right top;
+				background-repeat: no-repeat, repeat;
+				padding: 15px;
+			}*/
+			
+			#example1 {
+				background: url(border.png) right bottom no-repeat, url(img10.jpg) right top no-repeat;
+				padding: 15px;
+			}
+			
+			#example2 {
+				height: 380px;
+				/*background-color: #FF0000; 无效*/
+				background: url(img15.jpg);
+				background-size: 380px 380px;
+				background-repeat: repeat;
+			}
+			
+			#example3 {
+				margin-top: 50px;
+				background: url(border.png);
+				background-size: 100% 50%;
+				background-repeat: no-repeat;
+			}
+			
+			#example4 {
+				border: 10px dotted black;
+				padding: 35px;
+				background: yellow;
+				background-clip: padding-box;
+			}
+			
+			#example5 {
+				border: 10px dotted black;
+				padding: 35px;
+				background: yellow;
+				background-clip: content-box;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>css3 bg 学习示例</h1>
+		<div id="example1">
+			<h1>Lorem Ipsum Dolor</h1>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+			<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+			</p>
+		</div>
+
+		<div id="example2">
+			<p>图片: <img src="img15.jpg" alt="Flowers" width="64" height="62"></p>
+		</div>
+
+		<div id="example3">
+			<h1>Lorem Ipsum Dolor</h1>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+			<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+			</p>
+		</div>
+
+		<div id="example4">
+			<h2>background-clip: padding-box:</h2>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+		</div>
+
+		<div id="example5">
+			<h2>background-clip: content-box:</h2>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+		</div>
+	</body>
+
+</html>

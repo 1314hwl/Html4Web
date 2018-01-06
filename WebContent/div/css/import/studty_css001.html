@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="1.css">
+<title>css 的四种引入方式</title>
+<style>
+#div2 {
+	width: 1000px;
+	height: 40px;
+	background-color: aqua;
+	margin-top: 10px
+}
+</style>
+</head>
+<body>
+	<div id="div1"
+		style="width: 800px; height: 30px; background-color: fuchsia;">
+		<code> 1.直接在代码中嵌入 </code>
+	</div>
+	<div id="div2">
+		<code>2.在head标签中添加style标签，定义样式</code>
+	</div>
+	<div id="div3">
+		<code>3.在head中添加link+rel+href组合</code>
+	</div>
+	<div id="div4">
+		<code>4.在css文件中通过@IMPORT url(2.css)引入另一种样式</code>
+	</div>
+
+</body>
+</html>

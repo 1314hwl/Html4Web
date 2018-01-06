@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<p>点击按钮查看可输入的提示框</p>
+		<button onclick="myFunction()">点我</button>
+		<p id="demo"></p>
+		<input type="button" name="" id="btn" value="点击显示换行文字" onclick="test()" />
+		<script type="text/javascript">
+			function myFunction() {
+				var x;
+				var person = prompt("请输入你的名字", "Harry Potter");
+				if(person != null && person != "") {
+					x = "你好 " + person + "! 今天感觉如何?";
+					document.getElementById("demo").innerHTML = x;
+				} else {
+					document.getElementById("demo").innerHTML = "请输入内容";
+				}
+			}
+
+			function test() {
+				alert("Hello\nHow are you?");
+			}
+		</script>
+	</body>
+
+</html>

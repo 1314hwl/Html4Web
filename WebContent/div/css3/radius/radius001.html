@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>css3 radius</title>
+		<style type="text/css">
+			#radius-div {
+				border: 2px solid #0000FF;
+				background: #149BDF;
+				width: 400px;
+				border-radius: 10px;
+				padding: 10px;
+			}
+			
+			#border-img-round {
+				margin-top: 10px;
+				border: 10px solid transparent;
+				width: 250px;
+				padding: 10px 20px;
+				-webkit-border-image: url(border.png) 30 30 round;
+				/* Safari 5 and older */
+				-o-border-image: url(border.png) 30 30 round;
+				/* Opera */
+				border-image: url(border.png) 30 30 round;
+			}
+			
+			#border-img-stretch {
+				margin-top: 10px;
+				border: 10px solid transparent;
+				width: 250px;
+				padding: 10px 20px;
+				-webkit-border-image: url(border.png) 30 30 stretch;
+				/* Safari 5 and older */
+				-o-border-image: url(border.png) 30 30 stretch;
+				/* Opera */
+				border-image: url(border.png) 30 30 stretch;
+			}
+			
+			#shadow-div {
+				padding: 5px;
+				width: 400px;
+				height: 300px;
+				margin-top: 10px;
+				background-color: yellowgreen;
+				box-shadow: 10px 10px 5px #666666;
+			}
+			
+			#shadow-div-inset {
+				padding: 5px;
+				width: 400px;
+				height: 300px;
+				margin-top: 30px;
+				background-color: yellowgreen;
+				box-shadow: 10px 10px 5px #666666 inset;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="radius-div">
+			这个一个圆角测试
+		</div>
+		<div id="border-img-round">div带图片的border-round环绕。
+			<b>Internet Explorer 不支持 border-image 属性。</b>
+		</div>
+		<div id="border-img-stretch">div带图片的border-拉伸stretch。<b>Internet Explorer 不支持 border-image 属性。</b></div>
+		<div id="shadow-div">
+			<p>阴影效果：
+				<p>
+					<p>box-shadow: h-shadow v-shadow blur spread color inset;</p>
+					<p>h-shadow:水平距离 </p>
+					<p>v-shadow:垂直距离 </p>
+					<p>blur:模糊距离</p>
+					<p>spread:阴影的尺寸</p>
+					<p>color:阴影颜色</p>
+					<p>inset:将外部阴影 (outset) 改为内部阴影。</p>
+
+		</div>
+		<div id="shadow-div-inset">
+			<p>是否会有阴影</p>
+
+		</div>
+
+	</body>
+
+</html>

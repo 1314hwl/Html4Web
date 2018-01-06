@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>定时器</title>
+	</head>
+
+	<body>
+		<h1>定时器：</h1>
+		<p>单机按钮每3秒弹出一次提示框</p>
+		<p>每次点击警告框，间隔3秒重新提示警告框</p>
+		<input type="button" name="" id="" value="猛击我" onclick="doIntervalTimer()" />
+		<h2>下面显示一个时钟：</h2>
+		<p id="demo"></p>
+		<input type="button" name="" id="" value="点击停止时钟" onclick="stop()" />
+
+		<h2>setTimeout() 方法：</h2>
+		<p>显示一个timeout提示框</p>
+		<input type="button" name="" id="" value="点击我 timeout" onclick="timeoutDealPlay()" />
+		<input type="button" name="" id="" value="停止timeout" onclick="stopTimeout()" />
+		<script type="text/javascript">
+			function doIntervalTimer() {
+				setInterval(function() {
+					alert("hello world")
+				}, 3000);
+			}
+			var timer = setInterval(function() {
+				myTimer()
+			}, 1000);
+
+			function myTimer() {
+				var d = new Date();
+				var t = d.toLocaleTimeString();
+				document.getElementById("demo").innerHTML = t;
+			}
+
+			function stop() {
+				clearInterval(timer);
+			}
+			var timeOut;
+
+			function timeoutDealPlay() {
+				timeOut = setTimeout(function() {
+					alert("my timeout...")
+				}, 3000);
+			}
+
+			function stopTimeout() {
+				clearTimeout(timeOut);
+			}
+		</script>
+	</body>
+
+</html>

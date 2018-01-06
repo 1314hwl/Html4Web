@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				background-color: #003580;
+				text-align: center;
+				padding: 50px;
+				margin: 10px;
+				max-width: 200px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>事件冒泡或事件捕获：</h1>
+		<ul>
+			<li>在 冒泡 中，内部元素的事件会先被触发，然后再触发外部元素<b>：意思是child先被捕获</b>;
+			</li>
+			<li>在 捕获 中，外部元素的事件会先被触发，然后才会触发内部元素的事件<b>:意思是parent先被捕获</b></li>
+		</ul>
+		<h1>实例演示了在添加不同事件监听时，冒泡与捕获的不同。</h1>
+		<div id="div1">
+			<p id="p1">我是冒泡事件</p>
+		</div>
+		<div id="div2">
+			<p id="p2">我是捕获事件</p>
+		</div>
+		<script type="text/javascript">
+			document.getElementById("p1").addEventListener("click", function() {
+				alert("我是div1中的p1")
+			}, false);
+			document.getElementById("div1").addEventListener("click", function() {
+				alert("我是div1")
+			}, false);
+
+			document.getElementById("p2").addEventListener("click", function() {
+				alert("我是div2中的p2")
+			}, true);
+			document.getElementById("div2").addEventListener("click", function() {
+				alert("我是div2")
+			}, true);
+		</script>
+	</body>
+
+</html>

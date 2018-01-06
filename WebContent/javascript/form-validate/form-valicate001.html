@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function validateForm() {
+				var x = document.forms["myForm"]["fname"].value;
+				if(x == null || x == "") {
+					alert("请输入名字");
+					return false;
+				}
+			}
+
+			function checkRange() {
+				var number = document.getElementById("contentRange").value;
+				if(isNaN(number) || number < 1 || number > 10) {
+					alert("请输入1-10之间的数");
+					return false;
+				}
+			}
+
+			function checkRange2() {
+				var inputObj = document.getElementById("contentCheck");
+				if(inputObj.checkValidity() == false) {
+                      alert(inputObj.validationMessage);
+                      return;
+				}
+				alert("输入正确");
+			}
+		</script>
+	</head>
+
+	<body>
+		<h1>javaScript表单验证: </h1>
+		<form name="myForm" onsubmit="return validateForm()" method="post">
+			名字：<input type="text" name="fname" /><input type="submit" />
+
+		</form>
+		<h2>请输入1-10之间的数：</h2>
+		<input id="contentRange" type="number" value="0" />
+		<button type="button" onclick="checkRange()">请输入</button>
+		<h2>表单验证：</h2>
+		<input id="contentCheck" type="number" min="100" max="500" required/>
+		<button onclick="checkRange2()">验证</button>
+	</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css 连接样式</title>
+<style>
+a.one: link {
+	/* 未访问链接*/
+	color: #000000;
+}
+
+a.one:visited {
+	/* 已访问链接 */
+	color: #00FF00;
+}
+
+a.one:hover {
+	/* 鼠标移动到链接上 */
+	color: #FF00FF;
+}
+
+a.one:active {
+	/* 鼠标点击时 */
+	color: #0000FF;
+}
+
+a.two:link {
+	text-decoration: none;
+}
+
+a.two:visited {
+	text-decoration: none;
+}
+
+a.two:hover {
+	text-decoration: underline;
+}
+
+a.two:active {
+	text-decoration: underline;
+}
+
+a.three:link {
+	background-color: #B2FF99;
+}
+
+a.three:visited {
+	background-color: #FFFF85;
+}
+
+a.three:hover {
+	background-color: #FF704D;
+}
+
+a.three:active {
+	background-color: #FF704D;
+}
+</style>
+
+
+</head>
+<body>
+	<h1>css 连接样式</h1>
+	<div id="link">
+		<h2>四个链接状态</h2>
+		<ul>
+			<li>link - 正常，未访问过的链接</li>
+			<li>visited - 用户已访问过的链接</li>
+			<li>hover - 当用户鼠标放在链接上时</li>
+			<li>active - 链接被点击的那一刻</li>
+		</ul>
+		<p>
+			<b>注意：</b> a:hover 必须在 a:link 和 a:visited 之后，需要严格按顺序才能看到效果。
+		</p>
+		<p>
+			<b>注意：</b> a:active 必须在 a:hover 之后。
+		</p>
+		<a class="one" href="http://www.runoob.com/css/css-link.html">查看更多1</a></br>
+		<a class="two" href="http://www.runoob.com/css/css-link.html">查看更多2</a></br>
+		<a class="three" href="http://www.runoob.com/css/css-link.html">查看更多3</a></br>
+	</div>
+</body>
+</html>

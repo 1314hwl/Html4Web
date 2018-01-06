@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#testMouseEvent {
+				width: 100px;
+				height: 200px;
+				margin-top: 10px;
+				background-color: #004099;
+				color: white;
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div onmousemove="mOver(this)" onmouseout="mOut(this)" style="background-color: #002A80; width: 120px;height: 80px; color: white;align-content: center;">Mouse Over Me
+		</div>
+
+		<div onmousemove="style.color='red'" onmouseout="style.color='yellow'" id="testMouseEvent">我是黄冈人</div>
+
+		<script type="text/javascript ">
+			function mOver(obj) {
+				obj.innerHTML = "Thank You "
+				obj.style.color = "yellow"
+			}
+
+			function mOut(obj) {
+				obj.innerHTML = "Mouse Over Me "
+			}
+		</script>
+	</body>
+
+</html>

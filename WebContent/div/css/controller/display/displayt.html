@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css display</title>
+<style type="text/css">
+h1.hidden {
+	/* 隐藏后仍然占位 */
+	visibility: hidden;
+	/* 隐藏后不占位 */
+	display: none;
+}
+
+li {
+	display: inline;
+}
+
+span {
+	display: block;
+}
+</style>
+</head>
+<body>
+	<h1>css display 学习示例</h1>
+	<h1>这是一个可见标题</h1>
+	<h1 class="hidden">这是一个隐藏标题</h1>
+	<p>注意, 实例中的隐藏标题仍然占用空间。</p>
+	<h2>块元素:块元素是一个元素，占用了全部宽度，在前后都是换行符。</h2>
+	<ul>
+		<li>h标签</li>
+		<li>p标签</li>
+		<li>div标签</li>
+	</ul>
+	<h2>内联元素:内联元素只需要必要的宽度，不强制换行。</h2>
+	<ul>
+		<li>span标签</li>
+		<li>a标签</li>
+	</ul>
+
+	<h2>Radiohead</h2>
+	<span>Record: OK Computer</span>
+	<span>Year: 1997</span>
+</body>
+</html>

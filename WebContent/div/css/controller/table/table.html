@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css Table 学习</title>
+<style type="text/css">
+h2 {
+	
+}
+
+table.one, table.one th, table.one td {
+	border: 1px solid black;
+}
+
+table.two, table.two th, table.two td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+/* ============three============ */
+table.three, table.three th, table.three td {
+	border: 1px solid black;
+}
+
+table.three {
+	width: 100%;
+}
+
+table.three th {
+	height: 50px;
+}
+
+table.three tr.two td {
+	text-align: right;
+}
+
+table.three tr.three td {
+	height: 80px;
+	padding: 15px;
+	vertical-align: bottom;
+}
+/* ============four============ */
+table.four, table.four th, table.four td {
+	border: 1px solid black;
+}
+
+table.four {
+	width: 100%;
+}
+
+table.four th {
+	background-color: green;
+	color: white;
+}
+</style>
+</head>
+<body>
+	<h1>css Table 学习</h1>
+	<div>
+		<p>th:table header;tr:table row; td:table data</p>
+		<h2>普通效果:</h2>
+		<table class="one">
+			<tr>
+				<th>first name</th>
+				<th>last name</th>
+			</tr>
+			<tr>
+				<td>Peter</td>
+				<td>Griffin</td>
+			</tr>
+			<tr>
+				<td>Lois</td>
+				<td>Griffin</td>
+			</tr>
+		</table>
+		<h2>边框折叠:</h2>
+		<table class="two">
+			<tr>
+				<th>first name</th>
+				<th>last name</th>
+			</tr>
+			<tr>
+				<td>Peter</td>
+				<td>Griffin</td>
+			</tr>
+			<tr>
+				<td>Lois</td>
+				<td>Griffin</td>
+			</tr>
+		</table>
+		<h2>设置宽高,文字显示:</h2>
+		<table class="three">
+			<tr>
+				<th>first name</th>
+				<th>last name</th>
+			</tr>
+			<tr class="one">
+				<td>Peter</td>
+				<td>Griffin</td>
+			</tr>
+			<tr class="two">
+				<td>Lois</td>
+				<td>Griffin</td>
+			</tr>
+			<tr class="three">
+				<td>Byrant</td>
+				<td>Kobe</td>
+			</tr>
+		</table>
+		<h2>设置颜色:</h2>
+		<table class="four">
+			<tr>
+				<th>first name</th>
+				<th>last name</th>
+			</tr>
+			<tr class="one">
+				<td>Peter</td>
+				<td>Griffin</td>
+			</tr>
+			<tr class="two">
+				<td>Lois</td>
+				<td>Griffin</td>
+			</tr>
+			<tr class="three">
+				<td>Byrant</td>
+				<td>Kobe</td>
+			</tr>
+		</table>
+		<br> <a href="http://www.runoob.com/css/css-table.html"> 更多实例</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>docment write</title>
+		<script type="text/javascript">
+			function testClick() {
+				window.alert("hello world")
+				//下面这句会清空html代码
+				document.write("hello world!")
+			}
+
+			function innerTest() {
+				document.getElementById("innerBtn").innerHTML = "innerHtml002";
+			}
+		</script>
+	</head>
+
+	<body>
+		<h1>JavaScript 可以通过不同的方式来输出数据:</h1>
+		<ol>
+			<li>使用 window.alert() 弹出警告框。</li>
+			<li>使用 document.write() 方法将内容写到 HTML 文档中。</li>
+			<li>使用 innerHTML 写入到 HTML 元素。</li>
+			<li>使用 console.log() 写入到浏览器的控制台。</li>
+		</ol>
+		<button type="button" onclick="testClick()">button alert</button>
+		<button id="innerBtn" type="button" onclick="innerTest()">innerHtml001</button>
+		<script>
+			document.write("hello world!</br>")
+			window.alert("good idea!")
+		</script>
+	</body>
+
+</html>

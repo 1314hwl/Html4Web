@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScript HTML DOM 事件</title>
+		<script>
+			function changetext(id) {
+				id.innerHTML = "Hello World!";
+			}
+
+			function displayDate() {
+				document.getElementById("btn").innerHTML = new Date();
+			}
+		</script>
+	</head>
+
+	<body>
+		<h2>JavaScript HTML DOM 事件</h2>
+		<ol>
+			<li>当用户点击鼠标时</li>
+			<li>当网页已加载时</li>
+			<li>当图像已加载时</li>
+			<li>当鼠标移动到元素上时</li>
+			<li>当输入字段被改变时</li>
+			<li>当提交 HTML 表单时</li>
+			<li>当用户触发按键时</li>
+
+		</ol>
+		<h3 onclick="this.innerHTML='helloWorld'">点击文本发生改变!</h3>
+
+		<h3 onclick="changetext(this)">点击改变文本</h3>
+		<button id="btn">点这里</button>
+		<script type="text/javascript">
+			document.getElementById("btn").onclick = function() {
+				displayDate();
+			}
+		</script>
+	</body>
+
+</html>
